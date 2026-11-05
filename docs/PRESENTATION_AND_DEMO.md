@@ -10,6 +10,7 @@ with the base case loaded and the Summary tab open.
 - [ ] `source .venv/bin/activate && streamlit run app.py` tested once on the demo laptop. Browser zoom 110%.
 - [ ] A second laptop or phone with the Excel workbook open at the Summary sheet.
 - [ ] Printed: one-page cash flow table (base case), AI usage log, validation discrepancy table.
+- [ ] Demo from the local app (`streamlit run app.py`) with the live link https://ce725-real-estate-feasibility.streamlit.app/ open in a second tab as backup; the cloud app sleeps after idle, so open it 5 minutes before.
 - [ ] If demonstrating the Claude memo: `.streamlit/secrets.toml` present with `AIML_API_KEY`, internet checked, and one memo generated before the evaluators arrive (12 to 18 s). Otherwise use template mode and say why. Have `docs/llm_memo_claude-sonnet-5-5.md` open as a fallback.
 - [ ] Every member can state every formula in section 10 of the user manual without notes.
 

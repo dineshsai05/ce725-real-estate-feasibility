@@ -5,10 +5,11 @@ Writes screenshots to docs/screenshots/ and prints a pass/fail log.
 """
 from __future__ import annotations
 
+import os
 import pathlib, re, sys, time
 from playwright.sync_api import sync_playwright
 
-URL = "http://localhost:8501"
+URL = os.environ.get("APP_URL", "http://localhost:8501")
 OUT = pathlib.Path(__file__).resolve().parents[1] / "docs" / "screenshots"
 OUT.mkdir(parents=True, exist_ok=True)
 results: list[tuple[str, bool, str]] = []

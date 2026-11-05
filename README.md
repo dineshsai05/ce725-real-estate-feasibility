@@ -99,10 +99,13 @@ The manual benchmark the course requires (months 1, 8 and 36 of the cash flow an
 plus Goal Seek) is in section 6 of `docs/VALIDATION_REPORT.md`, re-performed and signed by the Validation
 Engineer. A spreadsheet generated with AI help is a cross-check, not a substitute for that step.
 
-## Repository and deployment
+## Live app and repository
 
-Source: https://github.com/dineshsai05/ce725-real-estate-feasibility (private). To host the app, deploy
-`app.py` from this repository on Streamlit Community Cloud. Add
+Live app: https://ce725-real-estate-feasibility.streamlit.app/ (Streamlit Community Cloud; the first load
+after idle takes about a minute). Source: https://github.com/dineshsai05/ce725-real-estate-feasibility.
+The browser test can be pointed at the deployment with
+`APP_URL=https://ce725-real-estate-feasibility.streamlit.app/~/+/ python tests/ui_test.py`; all 27 checks
+passed against it on 5 November 2026. Add
 `AIML_API_KEY` or `ANTHROPIC_API_KEY` under the app's Secrets if the Claude memo is wanted online.
 Never commit `.streamlit/secrets.toml`.
 

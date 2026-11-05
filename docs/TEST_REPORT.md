@@ -95,7 +95,8 @@ and `05b_memo_llm_error.png`.
   Memo text itself was read by a person once (see `docs/llm_memo_claude-sonnet-5-5.md` and
   `docs/llm_memo_claude-opus-5-5.md`); LLM output varies between runs and must be re-read every time.
 - Windows and macOS installation. Only Linux was used.
-- Streamlit Community Cloud deployment.
+- (Closed 5 Nov 2026.) Streamlit Community Cloud: all 27 browser checks, including the live Claude memo, passed
+  against https://ce725-real-estate-feasibility.streamlit.app/ (recompute 3.6 s).
 - Browser rendering in Firefox or Safari; only Chrome was used.
 - (Closed 5 Nov 2026.) The hand calculation by a person with a calculator is now in section 6 of the
   validation report, re-performed by the Validation Engineer.

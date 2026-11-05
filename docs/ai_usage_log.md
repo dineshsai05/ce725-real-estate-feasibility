@@ -47,5 +47,7 @@ were proposed by the AI and need a team member's sign-off.
 
 | 34 | 2026-11-05 | Surya Theja (manual, no AI) | Re-perform the manual benchmark: months 1, 8 and 36, the NPV sum and the two Goal Seek prices, with a calculator and the workbook | All lines reproduced the first-pass values; Goal Seek gives the same break-even prices as the bisection in Summary!B21/B22 | Accept | Course requirement met by a person. The AI's first pass (entry 33) served as the template; the AI was not used for any arithmetic in this step |
 
+| 35 | 2026-11-05 | Claude Code | Verify the Streamlit Community Cloud deployment | First run of the browser test timed out: the cloud page wraps the app in an iframe, so the test now takes the app URL from an environment variable and targets the inner frame. All 27 checks then passed on the deployment, including the Claude memo through the key stored in the app's secrets | Accept | Verified against the live URL, not the local copy; recompute 3.6 s on the cloud instance |
+
 Entries still possible before submission: any formula the team disagrees with, feedback from a practising
-engineer or lender if obtained. 34 entries; the minimum is 20.
+engineer or lender if obtained. 35 entries; the minimum is 20.

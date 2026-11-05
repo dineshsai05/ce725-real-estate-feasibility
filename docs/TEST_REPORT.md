@@ -81,7 +81,7 @@ and `05b_memo_llm_error.png`.
 | 8 | Property tests | My assertion that NPV always falls with the rate was false for loss-making and non-conventional flows | None (model correct) | Test restricted; recorded as a learning |
 | 9 | Screenshot review | Tornado colours inverted for cost drivers | Medium (misleading chart) | Colour by metric direction |
 | 10 | Screenshot review | Sensitivity table too wide for its column | Low | Shorter step labels |
-| 11 | Browser timing | 27.7 s per input change; sensitivity loops ran two break-even solves per appraisal | High (demo would stall) | Break-even skipped inside loops; 1.7 s |
+| 11 | Browser timing | 27.7 s per input change; sensitivity loops ran two break-even solves per appraisal | High (app unusable) | Break-even skipped inside loops; 1.7 s |
 | 12 | Browser test | Edit immediately after Reset lost while widgets remounted | None (test timing) | Test helper verifies and retries |
 | 13 | Tooling | Snap LibreOffice cannot write to /tmp; kill pattern matched its own shell | None | Project-local folder; kill by port |
 | 14 | LLM memo | First real memo (Sonnet 5.5 via AIML API) said the fact sheet "does not say which assumptions were changed" in the scenarios, so it could not judge their likelihood | Memo less useful | Scenario definitions added to the fact sheet; memo regenerated and re-checked |

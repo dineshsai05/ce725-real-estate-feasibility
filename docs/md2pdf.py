@@ -15,7 +15,7 @@ import markdown
 HERE = pathlib.Path(__file__).resolve().parent
 OUT = HERE / "pdf"
 DEFAULT = ["PROJECT_CHARTER.md", "USER_MANUAL.md", "VALIDATION_REPORT.md", "ai_usage_log.md", "REFLECTION_REPORT_DRAFT.md",
-           "DATA_SOURCES.md", "TEST_REPORT.md", "PRESENTATION_AND_DEMO.md"]
+           "DATA_SOURCES.md", "TEST_REPORT.md"]
 
 CSS = """
 @page { size: A4; margin: 16mm 15mm 16mm 15mm; }

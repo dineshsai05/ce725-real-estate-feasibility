@@ -57,7 +57,6 @@ docs/
   VALIDATION_REPORT.md       deliverable 3: benchmark vs tool, discrepancies and resolutions
   ai_usage_log.md            deliverable 4: Annexure A log
   REFLECTION_REPORT_DRAFT.md deliverable 5: draft for the team to rewrite; individual sections to be filled
-  PRESENTATION_AND_DEMO.md   deliverable 6: demo script, timings, viva questions
   DATA_SOURCES.md            data source list and method note for the base case (19 sources, all opened)
   USER_MANUAL_EXTENDED.md    longer version of the manual with every screen explained
   TEST_REPORT.md             what was tested, how, and what was found

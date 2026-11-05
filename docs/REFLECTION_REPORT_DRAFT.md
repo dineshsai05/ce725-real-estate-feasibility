@@ -8,7 +8,7 @@ AI and Tool Developer. Surya Theja (23B1062), Validation Engineer. Akshitha (23B
 Reflection Lead.
 
 Draft of 5 November 2026, prepared with AI assistance from the project record and to be edited by the team
-before submission (AI usage log entries 21, 33 and 34). Sections follow the order required in section 7 of
+before submission (AI usage log entries 21 and 33). Sections follow the order required in section 7 of
 the course brief.
 
 **How the work was divided.** The Project Lead set the method, the conventions and the base case, and took
@@ -328,7 +328,7 @@ memo before it leaves the firm.
 > **Status.** These five reflections were drafted with AI assistance on 5 November 2026 from the project
 > record and are written in the first person as a starting point. Each member is editing their own
 > reflection in their own words before submission and signs it. Text in [square brackets] marks a detail
-> only the member can supply. The AI's role in drafting them is recorded in AI usage log entries 33 and 34.
+> only the member can supply. The AI's role in drafting them is recorded in AI usage log entry 33.
 
 **Maneesha, Project Lead and Finance Modeller.**
 My role was to own the economic logic: the choice of a monthly discounted cash flow at the equity level,

@@ -119,7 +119,7 @@ The template version is safe; the LLM version is only as good as the person who 
 > their own words, add or remove anything that does not match their experience, and sign it. Text in
 > [square brackets] is a prompt for the member to fill in. Submitting these unedited would be presenting
 > AI output as personal reflection, which the course treats as misconduct. The AI's role in drafting them
-> is recorded in AI usage log entry 36.
+> is recorded in AI usage log entry 33.
 
 **Maneesha, Project Lead and Finance Modeller.** [Draft, to be rewritten by Maneesha.]
 My role was to own the economic logic: the choice of a monthly discounted cash flow at the equity level,

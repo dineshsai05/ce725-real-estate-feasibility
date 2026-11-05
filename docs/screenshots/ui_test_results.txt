@@ -1,0 +1,27 @@
+PASS	Base case equity NPV shown as ₹7.45 cr	₹7.45 cr
+PASS	Base case equity IRR 47.2%	47.2%
+PASS	Base case payback 27 mo	27 mo
+PASS	Base case break-even ₹6,250/sq ft	₹6,250/sq ft
+PASS	Verdict says Viable	
+PASS	Cash flow tab shows a data table	
+PASS	Cash flow tab has CSV download	
+PASS	Sensitivity tab has a table and a tornado chart	
+PASS	Sensitivity metric can be switched to Equity IRR	
+PASS	Scenario tab shows the preset table and names Downside, Severe and Upside	
+PASS	Custom stress sliders present (5)	
+PASS	Template memo generated and starts with INVESTMENT MEMO	INVESTMENT MEMO: Proposed residential de
+PASS	Template memo quotes the NPV	
+PASS	Template memo recommends PROCEED for base case	
+PASS	Claude mode without key shows a handled error, not a crash	Could not generate memo: TypeError: "Could not resolve authentication method. Expected one
+PASS	LLM memo generated via AIML API (non-empty, mentions NPV)	2944 chars
+PASS	LLM memo passes the fact-sheet number check	Every number in the memo matches the model fact sheet.
+PASS	Price 6,250 gives NPV about zero	₹0.00 cr
+PASS	Price 6,250 gives IRR about 15%	15.0%
+PASS	Invalid sales window shows validation error	Sales end month must be ≥ launch month.
+PASS	Invalid input hides KPI metrics	
+PASS	Reset restores base case NPV	₹7.45 cr
+PASS	Price 4,000 flips verdict to Not viable	
+PASS	Loss case payback reported as No payback	No payback
+PASS	Sales to month 40 extends horizon to 46 months	46 months
+PASS	Full recompute after an input change under 6 s	4.2s
+PASS	Construction cost 3,300 lowers NPV below base	₹5.52 cr

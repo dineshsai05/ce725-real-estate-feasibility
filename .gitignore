@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+benchmark/recalculated/
+.streamlit/secrets.toml
+.env
+
+# course material and instructor email, not part of the tool
+Course Project.pdf
+Project_Charter_Topic2*.pdf
+readme.md

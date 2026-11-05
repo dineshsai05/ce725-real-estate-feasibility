@@ -38,10 +38,25 @@ hr { border: 0; border-top: 1px solid #bbb; margin: 8pt 0; }
 """
 
 
+# The reflection report is a narrative document and is set as a report (11 pt, 1.45 spacing, 20 mm margins);
+# the other deliverables are reference material and keep the compact layout above.
+REPORT_CSS = CSS + """
+@page { margin: 20mm 20mm 20mm 20mm; }
+body { font-size: 11pt; line-height: 1.45; }
+h1 { font-size: 18pt; margin-bottom: 8pt; }
+h2 { font-size: 13.5pt; margin-top: 16pt; }
+h3 { font-size: 11.5pt; margin-top: 11pt; }
+p { margin: 5pt 0 8pt 0; }
+li { margin: 2pt 0; }
+table { font-size: 9.5pt; line-height: 1.3; }
+"""
+
+
 def to_pdf(md_path: pathlib.Path) -> tuple[pathlib.Path, int]:
     html_body = markdown.markdown(md_path.read_text(encoding="utf-8"),
                                   extensions=["tables", "fenced_code", "sane_lists"])
-    html = f"<!DOCTYPE html><html><head><meta charset='utf-8'><style>{CSS}</style></head><body>{html_body}</body></html>"
+    css = REPORT_CSS if md_path.stem.startswith("REFLECTION_REPORT") else CSS
+    html = f"<!DOCTYPE html><html><head><meta charset='utf-8'><style>{css}</style></head><body>{html_body}</body></html>"
     OUT.mkdir(exist_ok=True)
     html_path = OUT / (md_path.stem + ".html")
     html_path.write_text(html, encoding="utf-8")

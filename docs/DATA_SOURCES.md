@@ -82,7 +82,7 @@ Values are the base case in `feasibility/inputs.py`. "Fit" says where the value 
 - **Three inputs lean optimistic:** the 6-month instalment pattern, the 2% marketing cost, and the approval cost if the site is inside Greater Mumbai. Each one taken alone keeps the base case viable (see the sensitivity table), but a user appraising a real MMR site should start from a construction-linked payment schedule, 3% to 4% marketing, and the actual MCGM premium estimate.
 - **Two inputs are near the published central value:** selling price for Panvel or upper Dombivli, and the interest rate.
 - **Discount rate:** 15% is below the 16.4% cost of equity the EY/NSE survey reports for Indian real estate. The team kept 15% because it is the commonly taught hurdle and the sensitivity row shows the result at 16% and 17%.
-- **No input was changed after this check.** Changing the base case would have invalidated the Excel benchmark, the validation report and the screenshots. The decision, and the reasoning, is recorded in the AI usage log (entries 29 and 30).
+- **No input was changed after this check.** Changing the base case would have invalidated the Excel benchmark, the validation report and the screenshots. The decision, and the reasoning, is recorded in the AI usage log (entry 28).
 
 ## 5. Method note
 

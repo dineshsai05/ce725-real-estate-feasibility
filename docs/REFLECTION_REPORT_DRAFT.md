@@ -67,7 +67,9 @@ and usually right, and it was wrong in specific ways that we caught only because
 None of these were caught by reading the code. All were caught by running it against something
 independent: a benchmark, a test, a screenshot, or common sense about the numbers.
 
-**What the AI did not do.** It did not do the hand calculation the course requires, and it said so.
+**What the AI did not do.** It did not do the hand calculation the course requires on its own authority:
+it produced a calculator-style first pass on 5 November, labelled it as not satisfying the requirement, and
+the Validation Engineer re-performed every line by hand before it was accepted.
 It could not test the Claude-generated memo until the team supplied an API key on 5 November; until
 then it flagged the gap rather than filling it with invented results. When the memo was finally run
 (Claude Sonnet 5.5 and Opus 5.5 through the AIML API gateway), every number in both memos matched the
@@ -89,7 +91,9 @@ The agreement itself taught us little; the disagreements did.
   base case is well-behaved by construction.
 - An AI-generated spreadsheet is a cross-check, not the manual benchmark. The two engines could share
   a misunderstanding (they were written by the same AI from the same assumptions). This is why the
-  hand calculation in the validation report still has to be done by a person.
+  hand calculation in the validation report was re-performed by a person, and why that re-performance
+  found the same figures only because the two engines and the calculator all follow the written conventions
+  in the manual.
 
 ## 4. Practical relevance
 

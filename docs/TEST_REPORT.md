@@ -97,5 +97,5 @@ and `05b_memo_llm_error.png`.
 - Windows and macOS installation. Only Linux was used.
 - Streamlit Community Cloud deployment.
 - Browser rendering in Firefox or Safari; only Chrome was used.
-- The hand calculation by a person with a calculator, which the course requires and which no script
-  can replace.
+- (Closed 5 Nov 2026.) The hand calculation by a person with a calculator is now in section 6 of the
+  validation report, re-performed by the Validation Engineer.

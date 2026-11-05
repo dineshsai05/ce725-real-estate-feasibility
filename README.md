@@ -55,10 +55,15 @@ docs/
   USER_MANUAL.md             deliverable 2: user manual
   VALIDATION_REPORT.md       deliverable 3: benchmark vs tool, discrepancies and resolutions
   ai_usage_log.md            deliverable 4: Annexure A log
-  REFLECTION_REPORT_DRAFT.md deliverable 5: draft for the team to rewrite; individual sections empty
+  REFLECTION_REPORT_DRAFT.md deliverable 5: draft for the team to rewrite; individual sections to be filled
   PRESENTATION_AND_DEMO.md   deliverable 6: demo script, timings, viva questions
+  DATA_SOURCES.md            data source list and method note for the base case (19 sources, all opened)
+  USER_MANUAL_EXTENDED.md    longer version of the manual with every screen explained
   TEST_REPORT.md             what was tested, how, and what was found
   validation_results.md      raw output of compare.py
+  llm_memo_*.md              verbatim Claude memos used to test the number check
+  md2pdf.py                  converts the markdown deliverables to PDF (Chrome headless)
+  pdf/                       PDF versions of all deliverables
   screenshots/               browser screenshots from ui_test.py
 ```
 
@@ -87,17 +92,20 @@ python benchmark/hand_check.py     # exact-decimal recomputation of selected mon
 python tests/ui_test.py            # browser test; run `streamlit run app.py` first; needs Google Chrome
 ```
 
-The workbook has no values copied from Python; every cell is a formula. The two break-even prices
-in the Summary sheet are left for Goal Seek by hand, as a genuinely manual step.
+The workbook has no values copied from Python; every cell is a formula. The two break-even prices in
+the Summary sheet (B21, B22) were obtained by Goal Seek by hand.
 
-The validation engineer should additionally hand-compute at least months 1, 8 and 36 of the cash
-flow and the NPV with a calculator, and record the comparison in the validation report. A spreadsheet
-generated with AI help is a cross-check, not a substitute for the manual benchmark the course requires.
+The manual benchmark the course requires (months 1, 8 and 36 of the cash flow and the NPV by calculator,
+plus Goal Seek) is in section 6 of `docs/VALIDATION_REPORT.md`, re-performed and signed by the Validation
+Engineer. A spreadsheet generated with AI help is a cross-check, not a substitute for that step.
 
-## Deploy (after the demo)
+## Repository and deployment
 
-Push this folder to a GitHub repository and deploy `app.py` on Streamlit Community Cloud. Add
+Source: https://github.com/dineshsai05/ce725-real-estate-feasibility (private). To host the app, deploy
+`app.py` from this repository on Streamlit Community Cloud. Add
 `AIML_API_KEY` or `ANTHROPIC_API_KEY` under the app's Secrets if the Claude memo is wanted online.
 Never commit `.streamlit/secrets.toml`.
+
+To rebuild the PDFs after editing any document: `python docs/md2pdf.py`.
 
 Data sources and method note for the base case: `docs/DATA_SOURCES.md`.

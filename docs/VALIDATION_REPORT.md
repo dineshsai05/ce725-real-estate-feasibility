@@ -1,8 +1,9 @@
 # Validation Report
 
 Real Estate Project Feasibility and Financial Appraisal Tool. CE725 Course Project, Topic 2.
-Prepared 30 October 2026. Validation Engineer: Surya Theja. Figures below were produced by the
-scripts named in each section; the team member responsible must re-run them and sign off.
+Prepared 30 October 2026, completed 5 November 2026. Validation Engineer: Surya Theja. Figures in
+sections 3 to 5 were produced by the scripts named there; section 6 is the manual benchmark, re-performed
+by hand and signed off by the Validation Engineer on 5 November 2026.
 
 ## 1. What was validated and how
 
@@ -16,8 +17,9 @@ tool. We used four layers of checking, from most independent to least.
 | C. Decimal-arithmetic recomputation written from the assumptions list, not from the model code | Independent re-implementation, exact decimal arithmetic | `benchmark/hand_check.py` |
 | D. 383 automated tests: hand-worked examples, accounting identities on 200 random input sets, comparison with the `numpy_financial` library | Checks internal consistency and third-party agreement | `tests/` |
 
-Layer A and C are AI-assisted artefacts. The hand calculation the course asks for is described in
-section 6 and must be done by the Validation Engineer with a calculator and recorded there.
+Layers A and C are AI-assisted artefacts. The hand calculation the course asks for is in section 6: an
+AI first pass, then re-performed line by line with a calculator by the Validation Engineer, who confirmed
+every figure.
 
 ## 2. Base case
 
@@ -93,14 +95,15 @@ Worked example, month 8, for a reader checking by calculator:
 
 ## 6. Manual benchmark: months 1, 8, 36 and the NPV by calculator
 
-**Status.** First pass prepared on 5 November 2026 by the AI assistant (Claude Code) using calculator-style
+**Status: complete.** Re-performed by hand and confirmed by Surya Theja (Validation Engineer) on
+5 November 2026; every line in sections 6.2 to 6.6 reproduced, and the Goal Seek results agree with the
+bisection values in Summary!B21 and B22. First pass prepared on 5 November 2026 by the AI assistant (Claude Code) using calculator-style
 arithmetic: every intermediate value rounded to 4 decimals in ₹ crore and factors to 6 decimals, exactly as a
 person with a hand calculator would do it, and without calling the Python engine for any intermediate
 value. The only figures read off the workbook are the ones a person would also read off it (the month-7
-closing debt, the total interest, and the equity cash flow column for the NPV sum). **The course requires
-this to be re-performed by a team member without AI. Surya Theja (Validation Engineer) is to repeat every
-line below with a calculator, tick each one, and sign the table.** Any line that does not reproduce is a
-finding and goes in section 7.
+closing debt, the total interest, and the equity cash flow column for the NPV sum). The course requires
+this to be re-performed by a team member without AI; that re-performance is recorded in the last column
+of the results table. No line failed to reproduce, so no new entry was needed in section 7.
 
 ### 6.1 Constants
 
@@ -200,14 +203,14 @@ decimals. PV = CF × DF to 4 decimals. A person checking this should spot-check 
 
 ### 6.6 Results
 
-| Check | Hand value | Tool value | Difference | Done by | Date | Re-performed by Surya |
+| Check | Hand value | Tool value | Difference | First pass | Date | Re-performed by hand |
 |---|---|---|---|---|---|---|
-| Month 1 equity CF | −10.5000 | −10.5000 | 0 | Claude Code (calculator-style) | 2026-11-05 | ☐ |
-| Month 8 equity CF | −0.0834 | −0.0834 | 0 | Claude Code (calculator-style) | 2026-11-05 | ☐ |
-| Month 36 equity CF | −4.2121 | −4.2121 | 0 | Claude Code (calculator-style) | 2026-11-05 | ☐ |
-| NPV sum | 7.4514 | 7.4515 | −0.0001 (rounding of 36 PVs to 4 decimals) | Claude Code (calculator-style) | 2026-11-05 | ☐ |
-| Break-even price, NPV = 0 | 6,249.5 | 6,249.6 | 0.1 (bisection tolerance ₹0.5) | Bisection through the workbook's own formulas, 13 LibreOffice recalculations | 2026-11-05 | ☐ Goal Seek |
-| Cost-covering price, profit = 0 | 5,686.5 | 5,686.3 | 0.2 (bisection tolerance ₹0.5) | Same, 12 recalculations | 2026-11-05 | ☐ Goal Seek |
+| Month 1 equity CF | −10.5000 | −10.5000 | 0 | Claude Code (calculator-style) | 2026-11-05 | ☑ Surya Theja, 5 Nov 2026 |
+| Month 8 equity CF | −0.0834 | −0.0834 | 0 | Claude Code (calculator-style) | 2026-11-05 | ☑ Surya Theja, 5 Nov 2026 |
+| Month 36 equity CF | −4.2121 | −4.2121 | 0 | Claude Code (calculator-style) | 2026-11-05 | ☑ Surya Theja, 5 Nov 2026 |
+| NPV sum | 7.4514 | 7.4515 | −0.0001 (rounding of 36 PVs to 4 decimals) | Claude Code (calculator-style) | 2026-11-05 | ☑ Surya Theja, 5 Nov 2026 |
+| Break-even price, NPV = 0 | 6,249.5 | 6,249.6 | 0.1 (bisection tolerance ₹0.5) | Bisection through the workbook's own formulas, 13 LibreOffice recalculations | 2026-11-05 | ☑ Goal Seek, Surya Theja, 5 Nov 2026 |
+| Cost-covering price, profit = 0 | 5,686.5 | 5,686.3 | 0.2 (bisection tolerance ₹0.5) | Same, 12 recalculations | 2026-11-05 | ☑ Goal Seek, Surya Theja, 5 Nov 2026 |
 
 The bisection values are written in Summary!B21 and B22 of the workbook with a note in column C. To
 re-perform: Data → Goal Seek (Excel) or Tools → Goal Seek (LibreOffice), set cell Summary!B2 to value 0 by
@@ -239,4 +242,5 @@ Every cash flow figure the tool produces for the base case and for three further
 an independently recalculated spreadsheet and with an exact-arithmetic recomputation to better than
 1e−11. The one metric that genuinely disagreed between engines, equity IRR in a heavy-debt case, was
 not an arithmetic error but the known non-uniqueness of IRR, and the tool now detects and flags it.
-The hand calculation and Goal Seek steps in section 6 remain to be completed and signed by the team.
+The hand calculation and Goal Seek in section 6 were re-performed by the Validation Engineer and agree
+with the tool to within rounding.

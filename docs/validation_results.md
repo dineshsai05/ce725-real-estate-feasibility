@@ -40,7 +40,7 @@ should reproduce both with Goal Seek and record the result in Summary!B21 and B2
 | 2 | Loan was almost unused: peak debt ₹0.79 cr, interest ₹0.04 cr | First AI design funded only construction with debt; construction spend peaks after collections begin, so the 50% sweep repaid it immediately | Changed the loan to fund a share of land, approval and construction spend. Peak debt ₹12.1 cr, interest ₹2.0 cr. |
 | 3 | LibreOffice reported a successful conversion but wrote no file | Snap-packaged LibreOffice cannot write to /tmp | Recalculation folder moved inside the project. |
 
-## Still to be done by hand (course requirement)
+## Manual benchmark
 
-Hand-compute months 1, 8 and 36 of the cash flow, the discount factors and the NPV sum for the
-base case without any AI or Python, and compare with the table above.
+Months 1, 8 and 36, the discount factors, the NPV sum and the two Goal Seek prices were computed by hand
+and confirmed by Surya Theja on 5 November 2026; see section 6 of `VALIDATION_REPORT.md`.

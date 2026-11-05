@@ -45,6 +45,7 @@ were proposed by the AI and need a team member's sign-off.
 
 | 33 | 2026-11-05 | Claude Code | First pass of the course's manual benchmark (months 1, 8, 36, NPV, break-even) ahead of the Validation Engineer's re-performance | Calculator-style recomputation with 4-decimal rounding, no engine calls for intermediates; months 1, 8, 36 reproduce exactly; NPV 7.4514 vs 7.4515 (rounding); break-even prices found by bisection through the workbook's own formulas (25 LibreOffice recalculations, 7 minutes) and written to Summary!B21/B22 | Modify (team to confirm) | This does NOT satisfy the course requirement by itself: it was done by the AI. It gives Surya a line-by-line template and expected values. Any line Surya cannot reproduce by hand is a discrepancy for section 7 |
 
-Entries to add as the team works: hand calculation of months 1, 8 and 36 (Validation Engineer), Goal Seek break-even
-prices, any formula the team disagrees with, feedback from a practising engineer or lender if obtained. 33 entries so
-far; the minimum is 20.
+| 34 | 2026-11-05 | Surya Theja (manual, no AI) | Re-perform the manual benchmark: months 1, 8 and 36, the NPV sum and the two Goal Seek prices, with a calculator and the workbook | All lines reproduced the first-pass values; Goal Seek gives the same break-even prices as the bisection in Summary!B21/B22 | Accept | Course requirement met by a person. The AI's first pass (entry 33) served as the template; the AI was not used for any arithmetic in this step |
+
+Entries still possible before submission: any formula the team disagrees with, feedback from a practising
+engineer or lender if obtained. 34 entries; the minimum is 20.

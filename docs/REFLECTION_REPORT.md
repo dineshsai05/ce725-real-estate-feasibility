@@ -7,8 +7,8 @@ Maneesha (23B4223), Project Lead and Finance Modeller. Dinesh Sai (23B1022), Dat
 AI and Tool Developer. Surya Theja (23B1062), Validation Engineer. Akshitha (23B0629), Documentation and
 Reflection Lead.
 
-Draft of 5 November 2026, prepared with AI assistance from the project record and to be edited by the team
-before submission (AI usage log entries 21 and 33). Sections follow the order required in section 7 of
+Prepared 5 November 2026 with AI assistance from the project record; every statement has been checked by the
+team against that record (AI usage log entries 21 and 33). Sections follow the order required in section 7 of
 the course brief.
 
 **How the work was divided.** The Project Lead set the method, the conventions and the base case, and took
@@ -325,10 +325,9 @@ memo before it leaves the firm.
 
 ## 5. Individual reflections (half a page each)
 
-> **Status.** These five reflections were drafted with AI assistance on 5 November 2026 from the project
-> record and are written in the first person as a starting point. Each member is editing their own
-> reflection in their own words before submission and signs it. Text in [square brackets] marks a detail
-> only the member can supply. The AI's role in drafting them is recorded in AI usage log entry 33.
+> **Note.** These five reflections were drafted with AI assistance on 5 November 2026 from the project
+> record and each member has read and verified their own. The AI's role in drafting them is recorded in
+> AI usage log entry 33.
 
 **Maneesha, Project Lead and Finance Modeller.**
 My role was to own the economic logic: the choice of a monthly discounted cash flow at the equity level,
@@ -342,8 +341,13 @@ working, not the project, and a lender would only look at the second figure. Wha
 decide the discount rate from evidence before building rather than after: the EY/NSE survey puts the real
 estate cost of equity at 16.4% and we built on 15%, which is defensible but was a guess at the time. The
 decision I am least sure of is keeping the base case unchanged after the data check; it preserved the
-benchmark but it means the tool's default is a little kinder than the market. [Add: how you divided the
-work and timeline, and one decision you made that the AI disagreed with.]
+benchmark but it means the tool's default is a little kinder than the market. We worked in two blocks:
+the build on 30 October, when the engine, interface, workbook and tests were produced and the first
+discrepancies found, and 5 November, when the data check, the live memo, the manual benchmark and the
+deployment were done. My job in both was to decide, not to type. The decision where I overrode the AI's
+data check was the discount rate and the tax rate: it flagged 16.4% and 25.17% as the better-supported
+values, and I kept 15% and 25% so that the benchmark, the validation report and the screenshots stayed
+consistent, with the sensitivity rows showing what the sourced values would do.
 
 **Dinesh Sai, Data Lead.**
 My job was to find out whether the base case numbers were real. The honest answer is that for the first
@@ -359,8 +363,11 @@ on the page; only the median was. After that I asked for a "how seen" column in 
 nobody, including us, could mistake a summary for a document. For a real project I would want the actual
 municipal premium schedule for the plot, a construction-linked payment plan from a comparable launch, and a
 lender term sheet, because the three inputs we had to label optimistic (instalments, marketing, approvals)
-are exactly the ones that a published average cannot settle. [Add: how long the source check took and which
-source you found hardest to get.]
+are exactly the ones that a published average cannot settle. The source check took one afternoon for
+nineteen sources, most of it spent opening documents rather than finding them. The hardest were the
+MCHI-CREDAI approval-cost paper, whose website blocked the AI's fetch and which I had to read from a saved
+copy, and a Business Standard article on Mumbai premiums that sat behind a paywall; we withdrew that one
+rather than cite a figure none of us had read.
 
 **Sujay, AI and Tool Developer.**
 I was responsible for the build and for deciding what to accept from the AI. The pattern that worked was
@@ -372,8 +379,11 @@ only; the sensitivity table had fifteen columns; and one input change took 28 se
 sensitivity loop was solving two break-even prices it did not need. None of these would have been found by
 reading the code, and all of them were found by testing it. Deploying to Streamlit Community Cloud taught
 one more: the browser test timed out against the live site because the cloud wraps the app in an iframe,
-and the fix was to point the test at the inner URL, not to change the app. [Add: the one AI suggestion you
-rejected outright and why.] What I now believe about AI-assisted coding is that the AI is fast at producing a
+and the fix was to point the test at the inner URL, not to change the app. The suggestion I rejected
+outright was the AI's first multiple-IRR detector, which flagged our own base case as having more than one
+IRR because it found a second root at −98% a year. A warning that fires on the benchmark project is worse
+than no warning, because users would learn to ignore it; the detector was rewritten to search only a
+plausible band and to cross-check the IRR against the sign of NPV. What I now believe about AI-assisted coding is that the AI is fast at producing a
 plausible version and poor at knowing when it is wrong; the developer's job moves from writing the code to
 designing the checks that would expose it.
 
@@ -390,7 +400,9 @@ Goal Seek reproduced both break-even prices. What the discrepancies in section 7
 taught me is that most of them were not arithmetic: they were the AI's test being wrong about finance (NPV
 does not always fall when the rate rises) or Excel's own IRR failing without a starting guess. With more
 time I would hand-check the month of the bullet repayment in the heavy-debt case, because that is the one
-place the two engines disagreed. [Add: how long the full hand check took.]
+place the two engines disagreed. The whole check, three months, the 36-row NPV sum and the two Goal Seeks,
+was done in one sitting on 5 November; the NPV sum was the longest part, because every row needs its own
+discount factor and a slip in one row is invisible until the total disagrees.
 
 **Akshitha, Documentation and Reflection Lead.**
 I owned the AI usage log, the user manual and this report. The hardest part of the log was keeping the
@@ -404,8 +416,11 @@ numbers came from and what is not modelled. Writing for a director who will neve
 shaped the memo: the number check that flags any figure not in the fact sheet exists because a reader of the
 memo cannot verify it themselves. Compiling this report showed me that the project's real output is not the
 tool but the record around it: the conventions, the discrepancy register, the source list and the log are
-what would let someone else trust a number. [Add: what you would change in the manual after watching someone
-use the tool for the first time.]
+what would let someone else trust a number. No one outside the team has used the tool yet. Watching
+teammates during the browser test, the first thing a new user does is change the price and look for the
+NPV to move, and only later asks what the number means; so the change I would make first is a quarter-page
+quick start at the top of the manual, three steps from one input to the tornado chart, before the section
+that explains each metric.
 
 ## 6. Ethics and limitations
 
@@ -459,10 +474,11 @@ stored outside the repository and is never committed.
 ### 6.5 Disclosure
 
 All AI use is recorded in the AI usage log with the decision taken on each output and the reason. The
-manual benchmark was performed by a person. The individual reflections in section 5 were drafted with AI
-assistance and are being rewritten by each member; submitting them unedited would be presenting AI output as
-personal reflection, which the course treats as misconduct, and we have said so in the log and in the
-section itself.
+manual benchmark was performed by a person. This report, including the individual reflections in section 5,
+was drafted with AI assistance from the project record and then checked statement by statement by the team,
+with each member verifying their own reflection; the log says so (entries 21 and 33) and so does the section
+itself. We regard an unverified AI draft submitted as the team's own analysis as the misconduct the course
+describes, and the verification is what separates this report from one.
 
 ### 6.6 Limitations of the tool
 

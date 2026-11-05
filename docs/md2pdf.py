@@ -14,7 +14,7 @@ import markdown
 
 HERE = pathlib.Path(__file__).resolve().parent
 OUT = HERE / "pdf"
-DEFAULT = ["USER_MANUAL.md", "VALIDATION_REPORT.md", "ai_usage_log.md", "REFLECTION_REPORT_DRAFT.md",
+DEFAULT = ["PROJECT_CHARTER.md", "USER_MANUAL.md", "VALIDATION_REPORT.md", "ai_usage_log.md", "REFLECTION_REPORT_DRAFT.md",
            "DATA_SOURCES.md", "TEST_REPORT.md", "PRESENTATION_AND_DEMO.md"]
 
 CSS = """

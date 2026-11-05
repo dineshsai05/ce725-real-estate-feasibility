@@ -52,6 +52,7 @@ tests/
   test_edge_cases.py         validation, extreme inputs, sensitivity shape, memo number check
   ui_test.py                 browser test of the running app (Playwright + installed Chrome)
 docs/
+  PROJECT_CHARTER.md         project charter (Annexure B), all ten rows
   USER_MANUAL.md             deliverable 2: user manual
   VALIDATION_REPORT.md       deliverable 3: benchmark vs tool, discrepancies and resolutions
   ai_usage_log.md            deliverable 4: Annexure A log

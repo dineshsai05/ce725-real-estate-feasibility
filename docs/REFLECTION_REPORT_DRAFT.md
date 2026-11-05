@@ -111,13 +111,83 @@ use the following would have to change:
 The investment memo was the feature a non-technical reader valued most and the one we trust least.
 The template version is safe; the LLM version is only as good as the person who reads it.
 
-## 5. Individual reflections (half a page each, to be written by each member)
+## 5. Individual reflections (half a page each)
 
-- **Maneesha, Project Lead and Finance Modeller.** _Role, what you owned, one thing you now understand about real estate finance that you did not before, one thing you would do differently._
-- **Dinesh Sai, Data Lead.** _Where the base case numbers came from, how you judged whether they were realistic, what data you would want for a real project._
-- **Sujay, AI and Tool Developer.** _How you worked with the AI, which of its errors you caught, how you decided what to accept._
-- **Surya Theja, Validation Engineer.** _The hand calculation, the Goal Seek, what the discrepancies taught you._
-- **Akshitha, Documentation and Reflection Lead.** _Keeping the AI log honest, writing for a non-technical reader, what you would change in the manual._
+> **Draft status.** These five reflections were drafted by the AI assistant on 5 November 2026 from the
+> project record (the AI usage log, the validation report, the data source list and the test report) and
+> are written in the first person as a starting point only. Each member must rewrite their reflection in
+> their own words, add or remove anything that does not match their experience, and sign it. Text in
+> [square brackets] is a prompt for the member to fill in. Submitting these unedited would be presenting
+> AI output as personal reflection, which the course treats as misconduct. The AI's role in drafting them
+> is recorded in AI usage log entry 36.
+
+**Maneesha, Project Lead and Finance Modeller.** [Draft, to be rewritten by Maneesha.]
+My role was to own the economic logic: the choice of a monthly discounted cash flow at the equity level,
+the conventions in section 7 of the manual, and the base case. The thing I understand now that I did not
+at the start is that IRR is not a property of a project but of a cash flow pattern. When we ran a
+heavy-debt case, the tool said −14% and Excel said 839%, and both were right, because a large bullet
+repayment makes the equity cash flow change sign twice. Until then I had treated IRR as the number a
+developer quotes; now I would quote NPV at a stated hurdle rate and treat IRR as a cross-check. The second
+learning was how much leverage flatters equity IRR: 47% equity IRR against 34% project IRR is the loan
+working, not the project, and a lender would only look at the second figure. What I would do differently is
+decide the discount rate from evidence before building rather than after: the EY/NSE survey puts the real
+estate cost of equity at 16.4% and we built on 15%, which is defensible but was a guess at the time.
+[Add: how you divided the work and timeline, and one decision you made that the AI disagreed with.]
+
+**Dinesh Sai, Data Lead.** [Draft, to be rewritten by Dinesh.]
+My job was to find out whether the base case numbers were real. The honest answer is that for the first
+week they were not: they were round, plausible figures the AI proposed and we accepted, and no document said
+where they came from. Fixing that meant choosing a market, the peripheral Mumbai Metropolitan Region, and
+checking all 21 inputs against published sources. The most useful thing I learned is the difference between
+an asking price, a ready reckoner rate and a registered transaction rate: for Kalyan these were ₹9,750,
+₹6,039 and ₹7,900 per sq ft on the same day, and our ₹7,500 only looks right against the last of them.
+The second thing was that search summaries lie by omission. The first repo rate the AI reported was 5.25%;
+the RBI had raised it to 5.50% a month earlier, and only opening the RBI release caught it. I opened the
+MDPI paper myself when the AI's tools were blocked and found that the mean IRR hurdle it had quoted was not
+on the page; only the median was. For a real project I would want the actual MCGM premium schedule for the
+plot, a construction-linked payment plan from a comparable launch, and a lender term sheet, because the
+three inputs we had to label optimistic (instalments, marketing, approvals) are exactly the ones that a
+published average cannot settle.
+
+**Sujay, AI and Tool Developer.** [Draft, to be rewritten by Sujay.]
+I was responsible for the build and for deciding what to accept from the AI. The pattern that worked was
+never accepting code on the strength of it running. Every function was accepted only when something
+independent agreed with it: the Excel workbook, the numpy_financial library, a property test over 200
+random input sets, or a screenshot. That caught the errors that mattered: the IRR function returned nothing
+for the base case because its bracket was wrong; the loan was almost unused because it funded construction
+only; the sensitivity table had fifteen columns; and one input change took 28 seconds because the
+sensitivity loop was solving two break-even prices it did not need. None of these would have been found by
+reading the code, and all of them were found by testing it. [Add: the Streamlit Cloud deployment, what went
+wrong with the iframe, and the one AI suggestion you rejected outright.] What I now believe about AI-assisted
+coding is that the AI is fast at producing a plausible version and poor at knowing when it is wrong; the
+developer's job moves from writing the code to designing the checks that would expose it.
+
+**Surya Theja, Validation Engineer.** [Draft, to be rewritten by Surya.]
+My role was the manual benchmark, and the course is right to insist on it. The Excel workbook and the
+Python engine agreed to fourteen decimal places, which sounds like proof until you remember both were
+written by the same AI from the same assumptions; agreement between them only proves they share a reading.
+Redoing months 1, 8 and 36 with a calculator was the first time a person had followed the written
+conventions independently. Month 8 was the instructive one: getting the S-curve share, the instalment on
+the previous month's booking, the interest on the opening balance and the repayment cap in the right order
+takes about twenty minutes, and the only differences from the tool were in the fourth decimal, from my own
+rounding. The NPV sum of 36 present values came to 7.4514 against the tool's 7.4515 for the same reason.
+Goal Seek reproduced both break-even prices. What the discrepancies in section 7 of the validation report
+taught me is that most of them were not arithmetic: they were the AI's test being wrong about finance (NPV
+does not always fall when the rate rises) or Excel's own IRR failing without a starting guess. [Add: how
+long the full hand check took and what you would check next with more time.]
+
+**Akshitha, Documentation and Reflection Lead.** [Draft, to be rewritten by Akshitha.]
+I owned the AI usage log, the user manual and this report. The hardest part of the log was keeping the
+Decision column honest. It is easy to write Accept under every entry; the entries worth reading are the
+Modify and Reject ones, and the ones where the AI's output was wrong and we say so: the stale repo rate, the
+mean hurdle rate that was not in the paper, the tornado colours that were inverted, the test assumptions that
+were false. A log with no rejections would tell an evaluator we had not been checking. For the manual, the
+discipline was length. The first version was eight pages and read as a tour of the screen; the submitted
+four pages keep only what a user needs to act: inputs, how to read each metric, the conventions, where the
+numbers came from and what is not modelled. Writing for a director who will never open the tool also
+shaped the memo: the number check that flags any figure not in the fact sheet exists because a reader of the
+memo cannot verify it themselves. [Add: what you would change in the manual after watching someone use the
+tool for the first time, and how the log was maintained during the build rather than reconstructed.]
 
 ## 6. Ethics and limitations
 

@@ -49,5 +49,7 @@ were proposed by the AI and need a team member's sign-off.
 
 | 35 | 2026-11-05 | Claude Code | Verify the Streamlit Community Cloud deployment | First run of the browser test timed out: the cloud page wraps the app in an iframe, so the test now takes the app URL from an environment variable and targets the inner frame. All 27 checks then passed on the deployment, including the Claude memo through the key stored in the app's secrets | Accept | Verified against the live URL, not the local copy; recompute 3.6 s on the cloud instance |
 
+| 36 | 2026-11-05 | Claude Code | Draft the five individual reflections (section 5 of the reflection report) from the project record | Five first-person drafts of about half a page each, grounded in the AI log, validation report, data source list and test report, with bracketed prompts where only the member can supply the detail | Modify (required) | Disclosed in the report itself. Each member must rewrite their reflection in their own words and sign it; an unedited AI draft submitted as a personal reflection would be the misconduct the course PDF describes |
+
 Entries still possible before submission: any formula the team disagrees with, feedback from a practising
-engineer or lender if obtained. 35 entries; the minimum is 20.
+engineer or lender if obtained. 36 entries; the minimum is 20.

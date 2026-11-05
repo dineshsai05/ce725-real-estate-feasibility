@@ -1,6 +1,6 @@
 # Test Report
 
-Real Estate Project Feasibility and Financial Appraisal Tool. 30 October 2026, updated 5 November 2026
+Real Estate Project Feasibility and Financial Appraisal Tool. CE725 Team 8, Topic 2. 30 October 2026, updated 5 November 2026
 (LLM memo path tested with a real key).
 Everything below was executed on the development machine (Linux, Python 3.12, Streamlit 1.66,
 LibreOffice Calc, Google Chrome). Commands to reproduce are given for each layer.

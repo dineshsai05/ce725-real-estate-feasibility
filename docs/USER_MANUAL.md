@@ -1,6 +1,6 @@
 # User Manual: Real Estate Project Feasibility and Financial Appraisal Tool
 
-CE725 Construction Economics and Finance, IIT Bombay. Course Project, Topic 2. Version 1.1, 5 November 2026.
+CE725 Construction Economics and Finance, IIT Bombay. Course Project, Team 8, Topic 2. Version 1.1, 5 November 2026.
 Team: Maneesha (Project Lead and Finance Modeller), Dinesh Sai (Data Lead), Sujay (AI and Tool Developer),
 Surya Theja (Validation Engineer), Akshitha (Documentation and Reflection Lead).
 A longer version with worked explanations of every screen is in `docs/USER_MANUAL_EXTENDED.md`.

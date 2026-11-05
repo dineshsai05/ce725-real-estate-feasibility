@@ -5,7 +5,7 @@ completed 5 November 2026 to reflect the tool as built.
 
 | Item | Details |
 |---|---|
-| Team number | As assigned on Moodle (to be entered by the Project Lead) |
+| Team number | 8 |
 | Team members and roles | Maneesha (23B4223), R1 Project Lead and Finance Modeller. Dinesh Sai (23B1022), R2 Data Lead. Sujay (23B1059), R3 AI and Tool Developer. Surya Theja (23B1062), R4 Validation Engineer. Akshitha (23B0629), R5 Documentation and Reflection Lead. |
 | Topic selected | Topic 2: Real Estate Project Feasibility and Financial Appraisal Tool |
 | Problem statement (100 words) | Real estate developers commit substantial capital before knowing how land cost, construction cost, approvals, financing, taxes, selling prices, sales absorption and project timelines will unfold. A single headline figure such as IRR can make a project look viable while hiding how fragile that result is. Our project develops an AI-assisted feasibility and decision-support tool that integrates these inputs into a transparent cash flow model, calculating NPV, IRR, payback period, profit on cost and break-even selling price. It tests robustness through scenario, sensitivity and stress analysis, identifies the key risk drivers, and generates a plain-language investment memo to support developer decisions. |

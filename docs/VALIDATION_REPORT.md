@@ -1,6 +1,6 @@
 # Validation Report
 
-Real Estate Project Feasibility and Financial Appraisal Tool. CE725 Course Project, Topic 2.
+Real Estate Project Feasibility and Financial Appraisal Tool. CE725 Course Project, Team 8, Topic 2.
 Prepared 30 October 2026, completed 5 November 2026. Validation Engineer: Surya Theja. Figures in
 sections 3 to 5 were produced by the scripts named there; section 6 is the manual benchmark, re-performed
 by hand and signed off by the Validation Engineer on 5 November 2026.

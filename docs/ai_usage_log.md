@@ -1,6 +1,6 @@
 # AI Usage Log (Annexure A format)
 
-Maintained as the work happens. Tool: Claude Code (Claude Fable 5.1) unless stated otherwise.
+CE725 Team 8, Topic 2. Maintained as the work happens. Tool: Claude Code (Claude Fable 5.1) unless stated otherwise.
 Decision column: Accept / Modify / Reject, as decided by the team. Entries marked "team to confirm"
 were proposed by the AI and need a team member's sign-off.
 

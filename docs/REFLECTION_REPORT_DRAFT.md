@@ -1,6 +1,6 @@
 # Learnings and Reflection Report (DRAFT for the team to edit)
 
-Real Estate Project Feasibility and Financial Appraisal Tool. CE725 Course Project, Topic 2.
+Real Estate Project Feasibility and Financial Appraisal Tool. CE725 Course Project, Team 8, Topic 2.
 Draft prepared 30 October 2026 with AI assistance. The team must rewrite this in its own words,
 add the individual reflections, and check every claim. Sections follow the order required in the
 course brief, section 7. Target length 10 to 15 pages.

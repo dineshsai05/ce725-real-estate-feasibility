@@ -1,6 +1,6 @@
 # Real Estate Project Feasibility and Financial Appraisal Tool
 
-CE725 Construction Economics and Finance, IIT Bombay. Course project, Topic 2.
+CE725 Construction Economics and Finance, IIT Bombay. Course project, Team 8, Topic 2.
 
 Team: Maneesha (Project Lead and Finance Modeller), Dinesh Sai (Data Lead), Sujay (AI and Tool Developer),
 Surya Theja (Validation Engineer), Akshitha (Documentation and Reflection Lead).

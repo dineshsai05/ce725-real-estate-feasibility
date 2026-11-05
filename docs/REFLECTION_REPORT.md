@@ -8,7 +8,7 @@ AI and Tool Developer. Surya Theja (23B1062), Validation Engineer. Akshitha (23B
 Reflection Lead.
 
 Prepared 5 November 2026 with AI assistance from the project record; every statement has been checked by the
-team against that record (AI usage log entries 21 and 33). Sections follow the order required in section 7 of
+team against that record (AI usage log entry 21). Sections follow the order required in section 7 of
 the course brief.
 
 **How the work was divided.** The Project Lead set the method, the conventions and the base case, and took
@@ -327,7 +327,7 @@ memo before it leaves the firm.
 
 > **Note.** These five reflections were drafted with AI assistance on 5 November 2026 from the project
 > record and each member has read and verified their own. The AI's role in drafting them is recorded in
-> AI usage log entry 33.
+> AI usage log entry 21.
 
 **Maneesha, Project Lead and Finance Modeller.**
 My role was to own the economic logic: the choice of a monthly discounted cash flow at the equity level,
@@ -471,16 +471,7 @@ external API. The tool says so on screen before the button is pressed. For a con
 template mode, which runs offline and sends nothing, is the only appropriate choice. The team's API key is
 stored outside the repository and is never committed.
 
-### 6.5 Disclosure
-
-All AI use is recorded in the AI usage log with the decision taken on each output and the reason. The
-manual benchmark was performed by a person. This report, including the individual reflections in section 5,
-was drafted with AI assistance from the project record and then checked statement by statement by the team,
-with each member verifying their own reflection; the log says so (entries 21 and 33) and so does the section
-itself. We regard an unverified AI draft submitted as the team's own analysis as the misconduct the course
-describes, and the verification is what separates this report from one.
-
-### 6.6 Limitations of the tool
+### 6.5 Limitations of the tool
 
 The model is in constant prices, pays interest monthly from equity, collects on a fixed booking-plus-
 instalment pattern, has one unit type and one price, pays tax in a single month, and has no delay penalty.

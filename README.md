@@ -64,6 +64,7 @@ docs/
   llm_memo_*.md              verbatim Claude memos used to test the number check
   md2pdf.py                  converts the markdown deliverables to PDF (Chrome headless)
   pdf/                       PDF versions of all deliverables
+  demo_video.mp4             3-minute demo video of the tool
   screenshots/               browser screenshots from ui_test.py
 ```
 
